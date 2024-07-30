@@ -11,9 +11,16 @@
 		DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EED2C53897C00F5EC50 /* ContentView.swift */; };
 		DDA84EF02C53897E00F5EC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA84EEF2C53897E00F5EC50 /* Assets.xcassets */; };
 		DDA84EF32C53897E00F5EC50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA84EF22C53897E00F5EC50 /* Preview Assets.xcassets */; };
-		DDA84EFA2C538A5900F5EC50 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EF92C538A5900F5EC50 /* Task.swift */; };
-		DDA84EFC2C538CCD00F5EC50 /* Ex+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EFB2C538CCD00F5EC50 /* Ex+View.swift */; };
-		DDA84EFE2C538D8800F5EC50 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EFD2C538D8800F5EC50 /* DateExtension.swift */; };
+		DDC45F1E2C587F2F00A38EBB /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC45F1A2C587F2F00A38EBB /* Ubuntu-Regular.ttf */; };
+		DDC45F1F2C587F2F00A38EBB /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC45F1B2C587F2F00A38EBB /* Ubuntu-Bold.ttf */; };
+		DDC45F202C587F2F00A38EBB /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC45F1C2C587F2F00A38EBB /* Ubuntu-Medium.ttf */; };
+		DDC45F212C587F2F00A38EBB /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC45F1D2C587F2F00A38EBB /* Ubuntu-Light.ttf */; };
+		DDC45F242C587FB100A38EBB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F232C587FB100A38EBB /* Home.swift */; };
+		DDC45F262C58811B00A38EBB /* Ubuntu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F252C58811A00A38EBB /* Ubuntu.swift */; };
+		DDC45F292C58841E00A38EBB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F282C58841E00A38EBB /* View.swift */; };
+		DDC45F2B2C5886C200A38EBB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2A2C5886C200A38EBB /* Date.swift */; };
+		DDC45F2D2C58910700A38EBB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2C2C58910700A38EBB /* Task.swift */; };
+		DDC45F2F2C58918300A38EBB /* TaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2E2C58918300A38EBB /* TaskCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +29,17 @@
 		DDA84EED2C53897C00F5EC50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDA84EEF2C53897E00F5EC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA84EF22C53897E00F5EC50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DDA84EF92C538A5900F5EC50 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		DDA84EFB2C538CCD00F5EC50 /* Ex+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+View.swift"; sourceTree = "<group>"; };
-		DDA84EFD2C538D8800F5EC50 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		DDC45F1A2C587F2F00A38EBB /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		DDC45F1B2C587F2F00A38EBB /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		DDC45F1C2C587F2F00A38EBB /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		DDC45F1D2C587F2F00A38EBB /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		DDC45F222C587F5700A38EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDC45F232C587FB100A38EBB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		DDC45F252C58811A00A38EBB /* Ubuntu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ubuntu.swift; sourceTree = "<group>"; };
+		DDC45F282C58841E00A38EBB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DDC45F2A2C5886C200A38EBB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DDC45F2C2C58910700A38EBB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		DDC45F2E2C58918300A38EBB /* TaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +72,13 @@
 		DDA84EEA2C53897C00F5EC50 /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				DDC45F272C5883F700A38EBB /* Extension */,
+				DDC45F172C587E5D00A38EBB /* Font */,
+				DDC45F182C587E6200A38EBB /* Model */,
+				DDC45F192C587E6A00A38EBB /* View */,
+				DDC45F222C587F5700A38EBB /* Info.plist */,
 				DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */,
 				DDA84EED2C53897C00F5EC50 /* ContentView.swift */,
-				DDA84EFD2C538D8800F5EC50 /* DateExtension.swift */,
-				DDA84EFB2C538CCD00F5EC50 /* Ex+View.swift */,
-				DDA84EF92C538A5900F5EC50 /* Task.swift */,
 				DDA84EEF2C53897E00F5EC50 /* Assets.xcassets */,
 				DDA84EF12C53897E00F5EC50 /* Preview Content */,
 			);
@@ -74,6 +91,44 @@
 				DDA84EF22C53897E00F5EC50 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDC45F172C587E5D00A38EBB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DDC45F1B2C587F2F00A38EBB /* Ubuntu-Bold.ttf */,
+				DDC45F1D2C587F2F00A38EBB /* Ubuntu-Light.ttf */,
+				DDC45F1C2C587F2F00A38EBB /* Ubuntu-Medium.ttf */,
+				DDC45F1A2C587F2F00A38EBB /* Ubuntu-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DDC45F182C587E6200A38EBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDC45F252C58811A00A38EBB /* Ubuntu.swift */,
+				DDC45F2C2C58910700A38EBB /* Task.swift */,
+				DDC45F2E2C58918300A38EBB /* TaskCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDC45F192C587E6A00A38EBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDC45F232C587FB100A38EBB /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDC45F272C5883F700A38EBB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DDC45F282C58841E00A38EBB /* View.swift */,
+				DDC45F2A2C5886C200A38EBB /* Date.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC45F1E2C587F2F00A38EBB /* Ubuntu-Regular.ttf in Resources */,
+				DDC45F1F2C587F2F00A38EBB /* Ubuntu-Bold.ttf in Resources */,
+				DDC45F202C587F2F00A38EBB /* Ubuntu-Medium.ttf in Resources */,
+				DDC45F212C587F2F00A38EBB /* Ubuntu-Light.ttf in Resources */,
 				DDA84EF32C53897E00F5EC50 /* Preview Assets.xcassets in Resources */,
 				DDA84EF02C53897E00F5EC50 /* Assets.xcassets in Resources */,
 			);
@@ -146,10 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA84EFC2C538CCD00F5EC50 /* Ex+View.swift in Sources */,
-				DDA84EFE2C538D8800F5EC50 /* DateExtension.swift in Sources */,
 				DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */,
-				DDA84EFA2C538A5900F5EC50 /* Task.swift in Sources */,
+				DDC45F2B2C5886C200A38EBB /* Date.swift in Sources */,
+				DDC45F242C587FB100A38EBB /* Home.swift in Sources */,
+				DDC45F292C58841E00A38EBB /* View.swift in Sources */,
+				DDC45F262C58811B00A38EBB /* Ubuntu.swift in Sources */,
+				DDC45F2D2C58910700A38EBB /* Task.swift in Sources */,
+				DDC45F2F2C58918300A38EBB /* TaskCategory.swift in Sources */,
 				DDA84EEC2C53897C00F5EC50 /* TaskManagementApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,11 +348,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManagement/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,11 +376,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManagement/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
