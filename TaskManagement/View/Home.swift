@@ -12,6 +12,7 @@ struct Home: View {
     //view props
     @State private var currentDay: Date = .init()
     @State private var tasks: [Task] = sampleTasks
+    @State private var addNewTask: Bool = false
     
     var body: some View {
         ScrollView{
@@ -21,6 +22,11 @@ struct Home: View {
         .scrollIndicators(.hidden)
         .safeAreaInset(edge: .top, spacing: 0) {
             HeaderView()
+        }
+        .fullScreenCover(isPresented: $addNewTask){
+            AddTaskView { task in
+                tasks.append(task)
+            }
         }
     }
     
@@ -79,7 +85,7 @@ struct Home: View {
         .hAlign(.leading)
         .padding(.vertical, 15)
     }
-        
+    
     //Task row
     @ViewBuilder
     func TaskRow(_ task: Task) -> some View{
@@ -123,7 +129,7 @@ struct Home: View {
                 .hAlign(.leading)
                 
                 Button{
-                    
+                    addNewTask.toggle()
                 }label: {
                     HStack{
                         Image(systemName: "plus")
