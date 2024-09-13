@@ -6,19 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 // MARK: Task Model
-struct Task: Identifiable{
-    var id: UUID = .init()
+@Model
+class Task {
+    @Attribute(.unique) var id: UUID
     var dateAdded: Date
     var taskName: String
     var taskDescription: String
     var taskCategory: Category
-}
 
-/// - Sample Tasks
-let now = Date().timeIntervalSince1970
-var sampleTasks: [Task] = [
-//    .init(dateAdded: Date (timeIntervalSince1970: now), taskName: "Edit YT Video", taskDescription: "", taskCategory:
-//            .general)
-]
+    init(dateAdded: Date, taskName: String, taskDescription: String, taskCategory: Category) {
+        self.id = UUID()
+        self.dateAdded = dateAdded
+        self.taskName = taskName
+        self.taskDescription = taskDescription
+        self.taskCategory = taskCategory
+    }
+}

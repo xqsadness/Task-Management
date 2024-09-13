@@ -58,7 +58,7 @@ struct HeaderWeekSlider: View {
         VStack(alignment: .leading, spacing: 6){
             HStack{
                 Text("Welcome, xqsadness")
-                    .ubuntu(28, weight: .bold)
+                    .ubuntu(25, weight: .bold)
                     .foregroundStyle(.black).opacity(0.7)
                 
                 Spacer()

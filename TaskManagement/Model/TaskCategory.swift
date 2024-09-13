@@ -8,7 +8,7 @@
 import SwiftUI
 
 //MARK: Category enum with color
-enum Category: String, CaseIterable{
+enum Category: String, CaseIterable, Codable{
     case general = "General"
     case bug = "Bug"
     case idea = "Idea"

@@ -86,7 +86,7 @@ extension Calendar{
         
         return hours
     }
-
+    
     var currentWeek: [Date.WeekDay]{
         guard let firstWeekDay = self.dateInterval(of: .weekOfMonth, for: Date())?.start
         else{return []}

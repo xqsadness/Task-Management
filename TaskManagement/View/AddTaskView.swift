@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddTaskView: View {
     
-    var onAdd: (Task) -> ()
     //view props
     @Environment(\.dismiss) private var dismiss
     @State private var taskName: String = ""
@@ -19,6 +18,7 @@ struct AddTaskView: View {
     //Category animation props
     @State private var animateColor: Color = Category.general.color
     @State private var animate: Bool = false
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         VStack(alignment: .leading){
@@ -152,7 +152,7 @@ struct AddTaskView: View {
                                 }
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                                animate = false
+                                    animate = false
                                     taskCategory = category
                                 }
                             }
@@ -163,7 +163,7 @@ struct AddTaskView: View {
                 Button{
                     //Create task and pass it to the callback
                     let task = Task(dateAdded: taskDate, taskName: taskName, taskDescription: taskDesc, taskCategory: taskCategory)
-                    onAdd(task)
+                    context.insert(task)
                     dismiss()
                 }label:{
                     Text("Create task")
@@ -194,7 +194,5 @@ struct AddTaskView: View {
 }
 
 #Preview {
-    AddTaskView(){ task in
-        
-    }
+    AddTaskView()
 }

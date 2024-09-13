@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Home: View {
     
     //view props
     @State private var currentDay: Date = .init()
-    @State private var tasks: [Task] = sampleTasks
     @State private var addNewTask: Bool = false
+    // SwiftData query to fetch tasks
+    @Query var tasks: [Task]
     
     var body: some View {
         ScrollView{
@@ -22,12 +24,9 @@ struct Home: View {
         .scrollIndicators(.hidden)
         .safeAreaInset(edge: .top, spacing: 0) {
             HeaderWeekSlider(currentDate: $currentDay, addNewTask: $addNewTask)
-            //            HeaderView()
         }
         .fullScreenCover(isPresented: $addNewTask){
-            AddTaskView { task in
-                tasks.append(task)
-            }
+            AddTaskView()
         }
     }
     
