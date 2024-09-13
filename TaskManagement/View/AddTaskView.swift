@@ -2,7 +2,7 @@
 //  AddTaskView.swift
 //  TaskManagement
 //
-//  Created by darktech4 on 30/07/2024.
+//  Created by xqsadness on 30/07/2024.
 //
 
 import SwiftUI
@@ -38,7 +38,7 @@ struct AddTaskView: View {
                 
                 TitleView("NAME")
                 
-                TextField("Make new video", text: $taskName)
+                TextField("Your title", text: $taskName)
                     .ubuntu(16, weight: .regular)
                     .tint(.white)
                     .padding(.top, 2)

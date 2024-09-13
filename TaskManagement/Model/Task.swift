@@ -2,7 +2,7 @@
 //  Task.swift
 //  TaskManagement
 //
-//  Created by darktech4 on 30/07/2024.
+//  Created by xqsadness on 30/07/2024.
 //
 
 import SwiftUI
@@ -19,6 +19,6 @@ struct Task: Identifiable{
 /// - Sample Tasks
 let now = Date().timeIntervalSince1970
 var sampleTasks: [Task] = [
-    .init(dateAdded: Date (timeIntervalSince1970: now), taskName: "Edit YT Video", taskDescription: "", taskCategory:
-            .general)
+//    .init(dateAdded: Date (timeIntervalSince1970: now), taskName: "Edit YT Video", taskDescription: "", taskCategory:
+//            .general)
 ]

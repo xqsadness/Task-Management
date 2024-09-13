@@ -2,7 +2,7 @@
 //  Date.swift
 //  TaskManagement
 //
-//  Created by darktech4 on 30/07/2024.
+//  Created by xqsadness on 30/07/2024.
 //
 
 import SwiftUI
@@ -64,9 +64,17 @@ extension Date{
         return fetchWeek(previousDate)
     }
 }
+extension Date {
+    func isSameDay(as otherDate: Date) -> Bool {
+        let calendar = Calendar.current
+        return calendar.isDate(self, inSameDayAs: otherDate)
+    }
+}
 
 // MARK: Calander Extension
 extension Calendar{
+    
+    //return 24h in a day
     var hour: [Date]{
         let startOfDay = self.startOfDay(for: Date())
         var hours: [Date] = []
@@ -78,7 +86,7 @@ extension Calendar{
         
         return hours
     }
-    
+
     var currentWeek: [Date.WeekDay]{
         guard let firstWeekDay = self.dateInterval(of: .weekOfMonth, for: Date())?.start
         else{return []}

@@ -2,7 +2,7 @@
 //  Home.swift
 //  TaskManagement
 //
-//  Created by darktech4 on 30/07/2024.
+//  Created by xqsadness on 30/07/2024.
 //
 
 import SwiftUI
@@ -17,11 +17,12 @@ struct Home: View {
     var body: some View {
         ScrollView{
             TimelineView()
-                .padding(15)
+                .padding([.horizontal, .bottom], 15)
         }
         .scrollIndicators(.hidden)
         .safeAreaInset(edge: .top, spacing: 0) {
-            HeaderView()
+            HeaderWeekSlider(currentDate: $currentDay, addNewTask: $addNewTask)
+            //            HeaderView()
         }
         .fullScreenCover(isPresented: $addNewTask){
             AddTaskView { task in
@@ -60,7 +61,7 @@ struct Home: View {
             //Filtering tasks
             let calendar = Calendar.current
             let filteredTasks = tasks.filter{
-                if let hour = calendar.dateComponents([.hour], from: $0.dateAdded).hour,
+                if let hour = calendar.dateComponents([.hour], from: date).hour,
                    let taskHour = calendar.dateComponents([.hour], from: $0.dateAdded).hour,
                    hour == taskHour && calendar.isDate($0.dateAdded, inSameDayAs: currentDay){
                     return true
@@ -112,91 +113,6 @@ struct Home: View {
                     .fill(task.taskCategory.color.opacity(0.25))
             }
         }
-    }
-    
-    //Header view
-    @ViewBuilder
-    func HeaderView() -> some View{
-        VStack{
-            HStack{
-                VStack(alignment: .leading, spacing: 6){
-                    Text("Today")
-                        .ubuntu(30, weight: .light)
-                    
-                    Text("Welcome, Kenedy")
-                        .ubuntu(14, weight: .light)
-                }
-                .hAlign(.leading)
-                
-                Button{
-                    addNewTask.toggle()
-                }label: {
-                    HStack{
-                        Image(systemName: "plus")
-                        Text("Add task")
-                            .ubuntu(15, weight: .regular)
-                    }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 15)
-                    .background{
-                        Capsule()
-                            .fill(Color.cBlue.gradient)
-                    }
-                    .foregroundStyle(.white)
-                }
-            }
-            
-            //To day date string
-            Text(Date().toString("MMM YYYY"))
-                .ubuntu(16, weight: .medium)
-                .hAlign(.leading)
-                .padding(.top, 15)
-            
-            //Current week row
-            WeekRow()
-        }
-        .padding(15)
-        .background{
-            VStack(spacing: 0){
-                Color.white
-                
-                //Gradient opacity background
-                Rectangle()
-                    .fill(.linearGradient(colors: [
-                        .white,
-                        .clear
-                    ], startPoint: .top, endPoint: .bottom))
-                    .frame(height: 20)
-            }
-            .ignoresSafeArea()
-        }
-    }
-    
-    //Week row
-    @ViewBuilder
-    func WeekRow() -> some View{
-        HStack(spacing: 0){
-            ForEach(Calendar.current.currentWeek){ weekDay in
-                let status = Calendar.current.isDate(weekDay.date, inSameDayAs: currentDay)
-                VStack(spacing: 6){
-                    Text(weekDay.string.prefix(3))
-                        .ubuntu(12, weight: .medium)
-                    
-                    Text(weekDay.date.toString("dd"))
-                        .ubuntu(16, weight: .regular)
-                }
-                .foregroundStyle(status ? Color.cBlue : .gray)
-                .hAlign(.center)
-                .contentShape(.rect)
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 0.3)){
-                        currentDay = weekDay.date
-                    }
-                }
-            }
-        }
-        .padding(.vertical, 10)
-        .padding(.horizontal, -15)
     }
 }
 

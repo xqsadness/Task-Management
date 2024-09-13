@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD6488AE2C645CCA00506BD7 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6488AD2C645CCA00506BD7 /* OffsetKey.swift */; };
 		DDA84EEC2C53897C00F5EC50 /* TaskManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */; };
 		DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EED2C53897C00F5EC50 /* ContentView.swift */; };
 		DDA84EF02C53897E00F5EC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA84EEF2C53897E00F5EC50 /* Assets.xcassets */; };
@@ -22,10 +23,11 @@
 		DDC45F2D2C58910700A38EBB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2C2C58910700A38EBB /* Task.swift */; };
 		DDC45F2F2C58918300A38EBB /* TaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2E2C58918300A38EBB /* TaskCategory.swift */; };
 		DDC45F312C5899A200A38EBB /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F302C5899A100A38EBB /* AddTaskView.swift */; };
-		DDC45F332C58C4CE00A38EBB /* HeaderViewWeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F322C58C4CE00A38EBB /* HeaderViewWeekSlider.swift */; };
+		DDC45F332C58C4CE00A38EBB /* HeaderWeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD6488AD2C645CCA00506BD7 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		DDA84EE82C53897C00F5EC50 /* TaskManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementApp.swift; sourceTree = "<group>"; };
 		DDA84EED2C53897C00F5EC50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		DDC45F2C2C58910700A38EBB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		DDC45F2E2C58918300A38EBB /* TaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategory.swift; sourceTree = "<group>"; };
 		DDC45F302C5899A100A38EBB /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
-		DDC45F322C58C4CE00A38EBB /* HeaderViewWeekSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewWeekSlider.swift; sourceTree = "<group>"; };
+		DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWeekSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD6488AC2C645C7700506BD7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DD6488AD2C645CCA00506BD7 /* OffsetKey.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		DDA84EDF2C53897C00F5EC50 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		DDA84EEA2C53897C00F5EC50 /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				DD6488AC2C645C7700506BD7 /* Helper */,
 				DDC45F272C5883F700A38EBB /* Extension */,
 				DDC45F172C587E5D00A38EBB /* Font */,
 				DDC45F182C587E6200A38EBB /* Model */,
@@ -123,7 +134,7 @@
 			children = (
 				DDC45F232C587FB100A38EBB /* Home.swift */,
 				DDC45F302C5899A100A38EBB /* AddTaskView.swift */,
-				DDC45F322C58C4CE00A38EBB /* HeaderViewWeekSlider.swift */,
+				DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,7 +224,8 @@
 			files = (
 				DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */,
 				DDC45F2B2C5886C200A38EBB /* Date.swift in Sources */,
-				DDC45F332C58C4CE00A38EBB /* HeaderViewWeekSlider.swift in Sources */,
+				DD6488AE2C645CCA00506BD7 /* OffsetKey.swift in Sources */,
+				DDC45F332C58C4CE00A38EBB /* HeaderWeekSlider.swift in Sources */,
 				DDC45F242C587FB100A38EBB /* Home.swift in Sources */,
 				DDC45F312C5899A200A38EBB /* AddTaskView.swift in Sources */,
 				DDC45F292C58841E00A38EBB /* View.swift in Sources */,
