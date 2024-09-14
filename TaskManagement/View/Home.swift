@@ -14,6 +14,7 @@ struct Home: View {
     @State private var currentDay: Date = .init()
     @State private var addNewTask: Bool = false
     @State private var selectedTask: Task?
+    @State private var taskDate: Date = .init()
     // SwiftData query to fetch tasks
     @Query var tasks: [Task]
     @Environment(\.modelContext) private var context
@@ -28,7 +29,7 @@ struct Home: View {
             HeaderWeekSlider(currentDate: $currentDay, addNewTask: $addNewTask)
         }
         .fullScreenCover(isPresented: $addNewTask){
-            AddTaskView()
+            AddTaskView(taskDate: $taskDate)
         }
         .sheet(item: $selectedTask) { task in
             DetailTask(task: task)
@@ -61,6 +62,10 @@ struct Home: View {
             Text(date.toString("h a"))
                 .ubuntu(14, weight: .regular)
                 .frame(width: 45, alignment: .leading)
+                .onTapGesture {
+                    taskDate = date
+                    addNewTask = true
+                }
             
             //Filtering tasks
             let calendar = Calendar.current
@@ -78,6 +83,11 @@ struct Home: View {
                     .stroke(.gray.opacity(0.5), style: StrokeStyle(lineWidth: 0.5, lineCap: .butt, lineJoin: .bevel, dash: [5], dashPhase: 5))
                     .frame(height: 0.5)
                     .offset(y: 10)
+                    .contentShape(.rect)
+                    .onTapGesture {
+                        taskDate = date
+                        addNewTask = true
+                    }
             }else{
                 //Task view
                 VStack(spacing: 10){

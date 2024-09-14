@@ -9,11 +9,12 @@ import SwiftUI
 
 struct AddTaskView: View {
     
+    @Binding var taskDate: Date 
+
     //view props
     @Environment(\.dismiss) private var dismiss
     @State private var taskName: String = ""
     @State private var taskDesc: String = ""
-    @State private var taskDate: Date = .init()
     @State private var taskCategory: Category = .general
     //Category animation props
     @State private var animateColor: Color = Category.general.color
@@ -194,5 +195,5 @@ struct AddTaskView: View {
 }
 
 #Preview {
-    AddTaskView()
+    AddTaskView(taskDate: .constant(.init()))
 }
