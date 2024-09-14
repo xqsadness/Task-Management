@@ -13,8 +13,10 @@ struct Home: View {
     //view props
     @State private var currentDay: Date = .init()
     @State private var addNewTask: Bool = false
+    @State private var selectedTask: Task?
     // SwiftData query to fetch tasks
     @Query var tasks: [Task]
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         ScrollView{
@@ -27,6 +29,9 @@ struct Home: View {
         }
         .fullScreenCover(isPresented: $addNewTask){
             AddTaskView()
+        }
+        .sheet(item: $selectedTask) { task in
+            DetailTask(task: task)
         }
     }
     
@@ -80,6 +85,7 @@ struct Home: View {
                         TaskRow(task)
                     }
                 }
+                .animation(.spring, value: filteredTasks.count)
             }
         }
         .hAlign(.leading)
@@ -89,16 +95,31 @@ struct Home: View {
     //Task row
     @ViewBuilder
     func TaskRow(_ task: Task) -> some View{
-        VStack(alignment: .leading, spacing: 8){
-            Text(task.taskName.uppercased())
-                .ubuntu(16, weight: .regular)
-                .foregroundStyle(task.taskCategory.color)
-            
-            if !task.taskDescription.isEmpty{
-                Text(task.taskDescription)
-                    .ubuntu(14, weight: .light)
-                    .foregroundStyle(task.taskCategory.color.opacity(0.8))
+        HStack{
+            VStack(alignment: .leading, spacing: 8){
+                Text(task.taskName.uppercased())
+                    .ubuntu(16, weight: .bold)
+                    .foregroundStyle(task.taskCategory.color)
+                    .strikethrough(task.isCompleted, color: task.taskCategory.color)
+                
+                if !task.taskDescription.isEmpty{
+                    Text(task.taskDescription)
+                        .ubuntu(14, weight: .light)
+                        .foregroundStyle(task.taskCategory.color.opacity(0.8))
+                        .strikethrough(task.isCompleted, color: task.taskCategory.color)
+                }
             }
+            .hAlign(.leading)
+            
+            Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                .imageScale(.large)
+                .foregroundStyle(task.taskCategory.color)
+                .contentTransition(.symbolEffect(.replace))
+                .onTapGesture {
+                    withAnimation {
+                        task.isCompleted.toggle()
+                    }
+                }
         }
         .hAlign(.leading)
         .padding(12)
@@ -110,6 +131,18 @@ struct Home: View {
                 
                 Rectangle()
                     .fill(task.taskCategory.color.opacity(0.25))
+            }
+        }
+        .opacity(task.isCompleted ? 0.35 : 1)
+        .contentShape(.rect)
+        .onTapGesture {
+            selectedTask = task
+        }
+        .contextMenu{
+            Button(role: .destructive) {
+                context.delete(task)
+            } label: {
+                Label("Remove", systemImage: "trash")
             }
         }
     }

@@ -162,7 +162,7 @@ struct AddTaskView: View {
                 
                 Button{
                     //Create task and pass it to the callback
-                    let task = Task(dateAdded: taskDate, taskName: taskName, taskDescription: taskDesc, taskCategory: taskCategory)
+                    let task = Task(dateAdded: taskDate, taskName: taskName, taskDescription: taskDesc, isCompleted: false, taskCategory: taskCategory)
                     context.insert(task)
                     dismiss()
                 }label:{

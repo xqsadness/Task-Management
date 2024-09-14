@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3E7F052C952B88004FD76C /* DetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E7F042C952B88004FD76C /* DetailTask.swift */; };
 		DD6488AE2C645CCA00506BD7 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6488AD2C645CCA00506BD7 /* OffsetKey.swift */; };
 		DDA84EEC2C53897C00F5EC50 /* TaskManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */; };
 		DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84EED2C53897C00F5EC50 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD3E7F042C952B88004FD76C /* DetailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTask.swift; sourceTree = "<group>"; };
 		DD6488AD2C645CCA00506BD7 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		DDA84EE82C53897C00F5EC50 /* TaskManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementApp.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				DDC45F232C587FB100A38EBB /* Home.swift */,
 				DDC45F302C5899A100A38EBB /* AddTaskView.swift */,
 				DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */,
+				DD3E7F042C952B88004FD76C /* DetailTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA84EEE2C53897C00F5EC50 /* ContentView.swift in Sources */,
+				DD3E7F052C952B88004FD76C /* DetailTask.swift in Sources */,
 				DDC45F2B2C5886C200A38EBB /* Date.swift in Sources */,
 				DD6488AE2C645CCA00506BD7 /* OffsetKey.swift in Sources */,
 				DDC45F332C58C4CE00A38EBB /* HeaderWeekSlider.swift in Sources */,
@@ -366,6 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManagement/Preview Content\"";
+				DEVELOPMENT_TEAM = 4BB9BFSL47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManagement/Info.plist;
@@ -394,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManagement/Preview Content\"";
+				DEVELOPMENT_TEAM = 4BB9BFSL47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManagement/Info.plist;
