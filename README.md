@@ -13,3 +13,5 @@
 - Completion Tracking: Mark tasks as completed and distinguish them from pending ones.
 - Task Details: View task info including name, description, time, and category.
 - SwiftData: Manage task data seamlessly using SwiftData for persistence.
+
+- [Open an issue](https://github.com/xqsadness/Task-Management/issues) for issues with the existing codebase, or to request new features.
