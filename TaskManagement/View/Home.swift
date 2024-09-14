@@ -129,6 +129,10 @@ struct Home: View {
                     withAnimation {
                         task.isCompleted.toggle()
                     }
+                    
+                    if !task.isCompleted{
+                        NotificationService.shared.cancelNotification(for: task)
+                    }
                 }
         }
         .hAlign(.leading)
@@ -151,6 +155,7 @@ struct Home: View {
         .contextMenu{
             Button(role: .destructive) {
                 context.delete(task)
+                NotificationService.shared.cancelNotification(for: task)
             } label: {
                 Label("Remove", systemImage: "trash")
             }

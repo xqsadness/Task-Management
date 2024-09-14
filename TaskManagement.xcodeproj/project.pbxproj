@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,7 @@
 		DDC45F2F2C58918300A38EBB /* TaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F2E2C58918300A38EBB /* TaskCategory.swift */; };
 		DDC45F312C5899A200A38EBB /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F302C5899A100A38EBB /* AddTaskView.swift */; };
 		DDC45F332C58C4CE00A38EBB /* HeaderWeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */; };
+		DDEB2D452C9536690067F9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB2D442C9536690067F9BE /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,22 @@
 		DDC45F2E2C58918300A38EBB /* TaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategory.swift; sourceTree = "<group>"; };
 		DDC45F302C5899A100A38EBB /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		DDC45F322C58C4CE00A38EBB /* HeaderWeekSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWeekSlider.swift; sourceTree = "<group>"; };
+		DDEB2D442C9536690067F9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DDEB2D522C9537DF0067F9BE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NotificationService.swift,
+			);
+			target = DDA84EE72C53897C00F5EC50 /* TaskManagement */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DDEB2D502C9537DF0067F9BE /* Service */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (DDEB2D522C9537DF0067F9BE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Service; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DDA84EE52C53897C00F5EC50 /* Frameworks */ = {
@@ -88,6 +104,7 @@
 		DDA84EEA2C53897C00F5EC50 /* TaskManagement */ = {
 			isa = PBXGroup;
 			children = (
+				DDEB2D502C9537DF0067F9BE /* Service */,
 				DD6488AC2C645C7700506BD7 /* Helper */,
 				DDC45F272C5883F700A38EBB /* Extension */,
 				DDC45F172C587E5D00A38EBB /* Font */,
@@ -96,6 +113,7 @@
 				DDC45F222C587F5700A38EBB /* Info.plist */,
 				DDA84EEB2C53897C00F5EC50 /* TaskManagementApp.swift */,
 				DDA84EED2C53897C00F5EC50 /* ContentView.swift */,
+				DDEB2D442C9536690067F9BE /* AppDelegate.swift */,
 				DDA84EEF2C53897E00F5EC50 /* Assets.xcassets */,
 				DDA84EF12C53897E00F5EC50 /* Preview Content */,
 			);
@@ -233,6 +251,7 @@
 				DDC45F242C587FB100A38EBB /* Home.swift in Sources */,
 				DDC45F312C5899A200A38EBB /* AddTaskView.swift in Sources */,
 				DDC45F292C58841E00A38EBB /* View.swift in Sources */,
+				DDEB2D452C9536690067F9BE /* AppDelegate.swift in Sources */,
 				DDC45F262C58811B00A38EBB /* Ubuntu.swift in Sources */,
 				DDC45F2D2C58910700A38EBB /* Task.swift in Sources */,
 				DDC45F2F2C58918300A38EBB /* TaskCategory.swift in Sources */,

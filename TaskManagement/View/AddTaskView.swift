@@ -165,6 +165,7 @@ struct AddTaskView: View {
                     //Create task and pass it to the callback
                     let task = Task(dateAdded: taskDate, taskName: taskName, taskDescription: taskDesc, isCompleted: false, taskCategory: taskCategory)
                     context.insert(task)
+                    NotificationService.shared.scheduleNotification(for: task)
                     dismiss()
                 }label:{
                     Text("Create task")

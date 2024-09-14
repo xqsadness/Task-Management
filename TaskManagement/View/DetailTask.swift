@@ -2,7 +2,7 @@
 //  DetailTask.swift
 //  TaskManagement
 //
-//  Created by darktech4 on 14/9/24.
+//  Created by xqsadness on 14/9/24.
 //
 
 import SwiftUI
